@@ -83,6 +83,10 @@ main {
       display: flex;
       gap: 0.5rem;
       flex-shrink: 0;
+      & > *:hover,
+      & > *:active {
+        background-color: gray;
+      }
     }
   }
 }
