@@ -44,13 +44,15 @@ main {
     margin-bottom: 2rem;
   }
 
-  & > h2 {
-    font-size: 2rem;
-  }
+  .about-me-content {
+    & > h2 {
+      font-size: 2rem;
+    }
 
-  & > p {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    & > p {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -60,6 +62,8 @@ main {
   align-items: center;
   & > h2 {
     margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 300;
   }
   padding-bottom: 4rem;
 }
@@ -260,5 +264,42 @@ main {
 
   .projects {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .introduction {
+    & > .name {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: auto;
+    }
+  }
+  .about-me {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & .portrait {
+      margin: 2rem 1rem 0 0;
+      float: none;
+      width: 500px;
+    }
+    & .about-me-content {
+      background-color: white;
+      display: block;
+      width: 100%;
+
+      margin: 50px 0 0 -15px;
+
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.2);
+    }
+  }
+
+  .contact-content {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
