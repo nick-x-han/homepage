@@ -92,13 +92,22 @@ main {
 }
 
 .contact {
-  padding: 1rem;
   background-color: rgb(38, 170, 170);
+  & .portrait {
+    max-width: 100%;
+  }
+}
+.contact-text {
+  padding: 1rem;
   color: white;
   display: flex;
   flex-direction: column;
   & > h1 {
     text-align: center;
+  }
+
+  & > p {
+    font-size: 1.3rem;
   }
 
   & .address,
@@ -114,10 +123,6 @@ main {
   }
 }
 
-footer .portrait {
-  max-width: 100%;
-}
-
 @media (min-width: 700px) and (max-width: 1000px) {
   main {
     max-width: 1000px;
@@ -130,5 +135,45 @@ footer .portrait {
   }
   .projects {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    & .portrait {
+      max-width: 350px;
+    }
+    padding: 2rem;
+  }
+  .contact-text {
+    gap: 1rem;
+    & > h1 {
+      text-align: left;
+    }
+
+    & > p {
+      font-size: 1rem;
+    }
+
+    & .email::before,
+    & .phone::before {
+      content: "";
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      background-image: url("images/email.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 8px;
+      align-self: center;
+    }
+
+    & .phone::before {
+      background-image: url("images/phone.svg");
+    }
+
+    & > .icons {
+      align-self: flex-start;
+    }
   }
 }
