@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-}
-
 main {
   max-width: 360px;
   margin: 0 auto;
@@ -141,7 +138,7 @@ main {
   }
 }
 
-@media (min-width: 700px) and (max-width: 1000px) {
+@media (min-width: 700px) {
   main {
     max-width: 1000px;
     margin: 0 auto;
@@ -204,7 +201,7 @@ main {
     width: 100%;
   }
 
-  .contact {
+  .contact-content {
     display: flex;
     justify-content: space-between;
     & .portrait {
@@ -242,5 +239,26 @@ main {
     & > .icons {
       align-self: flex-start;
     }
+  }
+}
+
+@media (min-width: 1000px) {
+  main {
+    max-width: none;
+  }
+
+  .introduction,
+  .my-work,
+  .contact-content {
+    width: min(90%, 1100px);
+    margin-inline: auto;
+  }
+
+  .contact {
+    background-color: rgb(38, 170, 170);
+  }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
