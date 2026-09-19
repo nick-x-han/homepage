@@ -22,8 +22,15 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   & .portrait {
     max-width: 300px;
+  }
+  & > h1 {
+    position: absolute;
+    bottom: 7rem;
+    color: black;
+    font-size: 4rem;
   }
 }
 
@@ -128,6 +135,7 @@ main {
     max-width: 1000px;
     margin: 0 auto;
   }
+
   .my-work {
     width: fit-content;
     margin: 0 auto;
