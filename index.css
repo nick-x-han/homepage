@@ -91,14 +91,27 @@ main {
   padding: 1rem;
   background-color: rgb(38, 170, 170);
   color: white;
-  /* display: flex;
-  flex-direction: column; */
   & > h1 {
     text-align: center;
   }
 
-  .address,
+  & .address,
   .contact-info {
     margin-top: 1rem;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .my-work {
+    width: fit-content;
+    margin: 0 auto;
+    align-items: stretch;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
